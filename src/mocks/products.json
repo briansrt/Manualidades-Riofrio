@@ -1,0 +1,15 @@
+{"products":[{"id":1, "nombre": "Caja Cubo de Madera", "precio": 7500, "descripcion": "Elaborados con madera MDF 1/4.", "categoria": "Caja", "img": "/src/Img/caja-cubo.webp", "alt": "Cubo de madera MDF 1/4."},
+{"id":2, "nombre": "Caja Regalo de Madera", "precio":11000, "descripcion": "Caja de madera tipo ancheta para vino de 26x28x10cms.", "categoria":"Caja", "img": "/src/Img/caja-amor.webp", "alt": "Caja de madera tipo ancheta para vinos"},
+{"id":3, "nombre": "Caja Ancheta de Madera", "precio":10000, "descripcion": "Caja de madera tipo ancheta de 25cm x 25cm.", "categoria": "Caja", "img": "/src/Img/caja-canasta.webp", "alt": "Caja de madera tipo ancheta de 25cm x 25cm."},
+{"id":4, "nombre": "Caja Hexagonal", "precio": 15000, "descripcion": "Caja de madera hexagonal para guardar joyas.", "categoria": "Caja", "img": "/src/Img/caja-hexagonal.webp", "alt": "Caja de madera para guardar joyas."},
+
+{"id":5, "nombre": "Juego Rompecabezas", "precio": 3000, "descripcion": "Rompecabezas diseñada para mejorar el pensamiento lógico, la concentracion de los niños.", "categoria": "Juego", "img": "/src/Img/juego-rompecabezas.webp", "alt": "Juego Rompecabezas de madera"},
+{"id":6, "nombre": "Juego Tangram", "precio":5000, "descripcion": "Tangram diseñada para estimular la concentracion, la paciencia, la tolerancia a la frustacion de los niños", "categoria": "Juego", "img":"/src/Img/juego-tangram.webp", "alt": "Juego Tangram de Madera"},
+{"id":7, "nombre": "Juego Tetris", "precio":5000, "descripcion": "Tetris Tangram diseñada para mejorar el pensamiento espacial, las habilidades motoras de los niños.", "categoria":"Juego", "img": "/src/Img/juego-tetris.webp", "alt": "Juego Tetris de madera"},
+{"id":8, "nombre": "Juego Torre de Hanoi", "precio":3000, "descripcion":"Torre de Hanoi diseñada para mejorar el desarrollo integral de los niños.", "categoria": "Juego", "img":"/src/Img/juego-torre.webp", "alt":"Juego Torre de Hanoi de madera"},
+
+{"id":9, "nombre": "Caballo de Madera", "precio":12500, "descripcion":"Caballo de madera ideal para decorar con un muñeco en epocas navideñas.", "categoria":"Navidad", "img":"/src/Img/navidad-carrusel.webp", "alt":"Caballo de madera para decorar en epocas navideñas."},
+{"id":10, "nombre": "Carrusel", "precio":3000, "descripcion":"Carrusel de 25x20x21cm para decorar tu casa en epocas navideñas", "categoria":"Navidad", "img":"/src/Img/navidad-carrusel2.webp", "alt":"Carrusel para decorar en epocas navideñas"},
+{"id":11, "nombre": "Columpio Navideño", "precio":3000, "descripcion": "Columpio para decorar tu casa en epocas navideñas", "categoria": "Navidad", "img": "/src/Img/navidad-columpio.webp", "alt":"Columpio para decorar tu casa en epocas navideñas"},
+{"id":12, "nombre": "Columpio", "precio":3000, "descripcion": "Columpio para decorar tu casa en epocas navideñas", "categoria": "Navidad", "img": "/src/Img/navidad-columpio2.webp", "alt":"Columpio para decorar tu casa en epocas navideñas"}
+]}
