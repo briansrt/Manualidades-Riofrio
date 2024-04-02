@@ -109,6 +109,21 @@ Header li{
   object-fit: cover;
   background: #fff;
 }
+.sobrenosotros{
+  max-width: 1400px;
+  padding: 96px 0 80px 96px;
+}
+.sobrenosotros h2{
+  text-align: center;
+}
+.sobrenosotros div{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.sobrenosotros span{
+  font-weight: 700;
+}
 .banner{
   padding: 96px 0 96px 0;
 }

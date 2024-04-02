@@ -6,6 +6,7 @@ import { Filtros } from './Components/Filtros'
 import { products as initialProducts } from './mocks/products.json'
 import { Products } from './Components/Products'
 import './App.css'
+import { SobreNosotros } from './Components/Sobre-Nosotros'
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       <Inicio/>
       <Filtros changeFilters={setFilters}/>
       <Products products={filteredProducts}/>
+      <SobreNosotros/>
       <Banner/>
       <Footer/>
     </>
