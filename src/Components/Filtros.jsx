@@ -1,12 +1,16 @@
-import { useState } from "react"
+import { useId } from "react"
+import { useFilters } from "../hooks/useFilters"
 
-export function Filtros({changeFilters}){
+export function Filtros(){
+    const { filters, setFilters } = useFilters()
 
-    const [minPrice, setMinPrice]= useState(0)
+    const minPriceFilterId = useId()
+    const categoryFilterId = useId()
 
+ 
     const handleChangeMinPrice = (event) => {
-        setMinPrice(event.target.value)
-        changeFilters(prevState => ({
+        
+        setFilters(prevState => ({
             ...prevState,
             minPrice: event.target.value
         }))
@@ -14,7 +18,7 @@ export function Filtros({changeFilters}){
 
     const handleChangeCategory = (event, category) => {
         event.preventDefault();
-        changeFilters(prevState =>({
+        setFilters(prevState =>({
             ...prevState,
             categoria: category
         }))
@@ -25,17 +29,19 @@ export function Filtros({changeFilters}){
             <h2>Nuestros Productos</h2>
             <div className="filtros">
                 <div className="filtlabel">
-                    <label htmlFor="price"> Precio a partir de: </label>
-                    <input type="range" id="precio" min='0' max='16000' onChange={handleChangeMinPrice}></input>
-                    <span>$ {minPrice}</span>
+                    <label htmlFor={minPriceFilterId}> Precio a partir de: </label>
+                    <input type="range" id={minPriceFilterId} min='0' max='16000' value={filters.minPrice} onChange={handleChangeMinPrice}></input>
+                    <span>$ {filters.minPrice}</span>
                 </div>
                 <div>
-                    <button className="btncategoria" onClick={(event) => handleChangeCategory(event, 'all')}>Todos</button>
-                    <button className="btncategoria" onClick={(event) => handleChangeCategory(event,'Caja')}>Cajas</button>
-                    <button className="btncategoria" onClick={(event) => handleChangeCategory(event,'Navidad')}>Navidad</button>
-                    <button className="btncategoria" onClick={(event) => handleChangeCategory(event,'Juego')}>Juegos</button>
+                    <label htmlFor={categoryFilterId}>Categoria</label>
+                    <button id={categoryFilterId} className="btncategoria" onClick={(event) => handleChangeCategory(event, 'all')}>Todos</button>
+                    <button id={categoryFilterId} className="btncategoria" onClick={(event) => handleChangeCategory(event,'Caja')}>Cajas</button>
+                    <button id={categoryFilterId} className="btncategoria" onClick={(event) => handleChangeCategory(event,'Navidad')}>Navidad</button>
+                    <button id={categoryFilterId} className="btncategoria" onClick={(event) => handleChangeCategory(event,'Juego')}>Juegos</button>
                 </div>
             </div>
         </section>
     )
+    
 }

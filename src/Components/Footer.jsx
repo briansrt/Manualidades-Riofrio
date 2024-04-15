@@ -1,7 +1,9 @@
 
+import { useFilters } from "../hooks/useFilters"
 import { CorreoIcon } from "./Icons"
 
 export function Footer(){
+    const { filters } = useFilters()
     return(
         <footer>
             <div>
@@ -23,6 +25,10 @@ export function Footer(){
                     <p>Carrera ## Calle ## Cali-Colombia</p>
                 </div>
             </div>
+
+            {
+                JSON.stringify(filters, null, 2)
+            }
         </footer>
     )
 }

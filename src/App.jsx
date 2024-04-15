@@ -7,32 +7,19 @@ import { products as initialProducts } from './mocks/products.json'
 import { Products } from './Components/Products'
 import './App.css'
 import { SobreNosotros } from './Components/Sobre-Nosotros'
+import { useFilters } from './hooks/useFilters'
+import { Cart } from './Components/Carrito'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [products] = useState(initialProducts)
-  const [filters, setFilters] = useState({
-    categoria: 'all',
-    minPrice: 0
-  })
-  const filterProducts = (products) =>{
-    return products.filter(product =>{
-      return (
-        product.precio >= filters.minPrice && (
-          filters.categoria === 'all' ||
-          product.categoria === filters.categoria
-        )
-      )
-    })
-  }
-
-  const filteredProducts = filterProducts(products)
+  const {filters, filterProducts} = useFilters()
+  const filteredProducts = filterProducts(initialProducts)
 
   return (
     <>
       <Inicio/>
-      <Filtros changeFilters={setFilters}/>
+      <Filtros/>
+      <Cart/>
       <Products products={filteredProducts}/>
       <SobreNosotros/>
       <Banner/>
