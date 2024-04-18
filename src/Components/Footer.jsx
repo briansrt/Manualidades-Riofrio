@@ -1,9 +1,11 @@
 
+import { useCart } from "../hooks/useCart"
 import { useFilters } from "../hooks/useFilters"
 import { CorreoIcon } from "./Icons"
 
 export function Footer(){
     const { filters } = useFilters()
+    const { cart } = useCart()
     return(
         <footer>
             <div>
@@ -28,6 +30,9 @@ export function Footer(){
 
             {
                 JSON.stringify(filters, null, 2)
+            }
+            {
+                JSON.stringify(cart, null, 2)
             }
         </footer>
     )

@@ -9,6 +9,7 @@ import './App.css'
 import { SobreNosotros } from './Components/Sobre-Nosotros'
 import { useFilters } from './hooks/useFilters'
 import { Cart } from './Components/Carrito'
+import { CartProvider } from './context/cart'
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
   const filteredProducts = filterProducts(initialProducts)
 
   return (
-    <>
+    <CartProvider>
       <Inicio/>
       <Filtros/>
       <Cart/>
@@ -24,7 +25,7 @@ function App() {
       <SobreNosotros/>
       <Banner/>
       <Footer/>
-    </>
+    </CartProvider>
   )
 }
 
