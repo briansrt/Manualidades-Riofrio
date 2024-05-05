@@ -16,7 +16,7 @@ export function Header(){
                         <a>Nuestros Productos</a>
                         <a>Sobre Nosotros</a>
                         <a>Contáctanos</a>
-                        <a><CarritoIcon/></a>
+                        
                     </li>
                 </ul>
             </nav>

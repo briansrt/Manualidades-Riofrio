@@ -10,10 +10,10 @@ function CartItem({img, precio, nombre, quantify, alt, addToCart}){
                 <strong>{nombre}</strong> - ${precio}
             </div>
             <footer>
-                <button onClick={addToCart}>
-                    Qty: {quantify}
-                </button>
-                <button>+</button>
+                <small>
+                    <strong>Cantidad:</strong> {quantify}
+                </small>
+                <button onClick={addToCart}>+</button>
             </footer>
         </li>
     )
@@ -21,7 +21,7 @@ function CartItem({img, precio, nombre, quantify, alt, addToCart}){
 
 export function Cart(){
     const cartCheckboxId= useId()
-    const {cart, clearCart } = useCart()
+    const {cart, clearCart, addToCart } = useCart()
     return(
         <>
         <label className="cart-button" htmlFor={cartCheckboxId}>
